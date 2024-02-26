@@ -1,10 +1,17 @@
 import './App.css';
+import Car from './components/Car';
 import MyComponent from './components/MyComponent';
 import Title from './components/Title';
 
 function App() {
   let n = 10;
   let redTitle = true;
+
+  const myCars = [
+    {name:"Fusca",km:10000,color:"Branca"},
+    {name:"Polo",km:3200,color:"Cinza"},
+    {name:"Onix",km:0,color:"Preto"},
+  ]
 
   return (
     <div className="App">
@@ -34,6 +41,15 @@ function App() {
        {/*CSS Modules
        Alternativa muito interessante quando queremos restringir o css por componente. Pois o css é único por componente.*/}
        <Title/>
+
+       {/*Desafio CSS */}
+       <hr />
+       <h1>ShowRooms de Carros</h1>
+       <div className="carContainer">
+        {myCars.map((car) =>(
+          <Car car={car}/>
+        ))}
+       </div>
     </div>
   );
 }

@@ -22,3 +22,13 @@ h1{
   background-color: #000;
   color: white;
 }
+
+.carContainer{
+  display: flex;
+  justify-content: center;
+
+}
+
+.carContainer div{
+  margin-top: 50px;
+}
