@@ -1,0 +1,14 @@
+p{
+    color: green;
+    background-color: #000;
+}
+
+/*
+Para não vazar o CSS para outro componente, podemos criar um regra específica utilizando classes
+*/
+
+p.my-comp-paragraph{
+    color: #000;
+    background-color: gold;
+    font-size: 25px !important;
+}
