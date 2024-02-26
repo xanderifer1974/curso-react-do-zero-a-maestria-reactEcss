@@ -2,6 +2,7 @@ import './App.css';
 import MyComponent from './components/MyComponent';
 
 function App() {
+  let n = 10;
   return (
     <div className="App">
       {/* CSS Global */}
@@ -14,6 +15,15 @@ function App() {
       {/*Inline CSS 
       Este tipo de regra precisa ser evitado, mais para nivel de conhecimento foi mostrado*/}
       <p style={{color:"blue", padding:"25px", borderTop:"15px solid red"}}>Este elemento foi estilizado de forma inline</p>
+
+      {/*CSS inline dinâmico */}
+      <h2 style={{ color: n < 10 ? "purple" : "pink" }}>CSS dinâmico</h2>
+
+       {/*CSS inline dinâmico */}
+       <h2 style={{ color: n > 10 ? "purple" : "pink" }}>CSS dinâmico</h2>
+
+       {/*CSS inline dinâmico */}
+       <h2 style={ n =10 ? {color:"green"} : {color:"yellow"} }>CSS dinâmico</h2>
     </div>
   );
 }
