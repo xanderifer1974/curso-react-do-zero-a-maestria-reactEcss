@@ -1,5 +1,6 @@
 import './App.css';
 import MyComponent from './components/MyComponent';
+import Title from './components/Title';
 
 function App() {
   let n = 10;
@@ -29,6 +30,10 @@ function App() {
 
        {/*Classes dinâmicas*/}
        <h2 className={redTitle? "red-title":"title"}>Este título vai ter classe dinâmica</h2>
+
+       {/*CSS Modules
+       Alternativa muito interessante quando queremos restringir o css por componente. Pois o css é único por componente.*/}
+       <Title/>
     </div>
   );
 }
